@@ -6,11 +6,11 @@ public class Carro {
     // #region Atributos
     String marca;
     String modelo;
-    String tipoCombustivel;
 
     int numPassageiro;
     double capCmbustivel;
     double consCombustivel;
+    String tipoCombustivel;
 
     // #endregion
     // #region Regras de negocio da classe (metodos)
@@ -18,8 +18,19 @@ public class Carro {
         return Math.round((this.capCmbustivel * this.consCombustivel));
     }
 
+    public double avaliaTipoDeCombustivel(String combustivel) {
+        if (combustivel == "diesel") {
+            return 1.6;
+        } else if (combustivel == "gasolina") {
+            return 1;
+        } else {
+            return 0.7;
+        }
+    }
+
     public double verificarEcoDesempenho() {
-        double eco = this.calculaAutonomia() / this.numPassageiro;
+        double eco = (this.calculaAutonomia() / this.numPassageiro)
+                * this.avaliaTipoDeCombustivel(this.tipoCombustivel);
         return Math.round(eco);
     }
 

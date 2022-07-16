@@ -1,10 +1,14 @@
-package aula4;
+// package aula4;
 
-public class Aeronave {
-    
-}
+// public class Aeronave {
+
+// }
+
+// System.out.println("---exercicio de aeronave");
+
+// Aeronave boing = new Aeronave();
 /*
- * Criar uma classe chamada Aeronave: 
+ * Criar uma classe chamada Aeronave:
  * [tripulacao, combustivel, consumo, passageiros, passagem, tanque]
  * Criar os métodos da classe Aeronave:
  * 1. calcular a autonomia da Aeronave.

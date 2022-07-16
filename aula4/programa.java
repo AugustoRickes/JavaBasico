@@ -17,7 +17,7 @@ public class programa {
         fusca.capCmbustivel = 40;
         fusca.numPassageiro = 4;
         fusca.consCombustivel = 7.7;
-        fusca.tipoCombustivel = "gasolina";
+        fusca.tipoCombustivel = "etanol";
 
         System.out.println("----- Impressao do objeto [fisico]----");
         System.out.println("modelo: " + van.modelo + " | Autonomia: " + van.calculaAutonomia());
@@ -37,20 +37,5 @@ public class programa {
         } else {
             System.out.println("nao e eco eficiente");
         }
-
-        System.out.println("---exercicio de aeronave");
-
-        Aeronave boing = new Aeronave();
-        /*
- * Criar uma classe chamada Aeronave: 
- * [tripulacao, combustivel, consumo, passageiros, passagem, tanque]
- * Criar os métodos da classe Aeronave:
- * 1. calcular a autonomia da Aeronave.
- * 2. calcular o indice por passageiro.
- * 3. Media de valor por autonomiia de voo.
- * Depois usar a classe programa para mostrar estes dados em
- * 4 objetos e seu local fisico de armazenamento.
- */
-
     }
 }
