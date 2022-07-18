@@ -3,6 +3,7 @@ package aula5;
 public class Aluno extends Pessoa {
     private String curso;
     private double[] notas;
+
     // #region Encapsulamento [getters e setters]
 
     public String getCurso() {
