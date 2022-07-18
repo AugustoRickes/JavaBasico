@@ -1,10 +1,10 @@
 package aula5;
 
 public class Professor extends Pessoa {
-
-    // #region encapsulamento [getters e setters]
     private double salario;
     private String nomeCurso;
+
+    // #region encapsulamento [getters e setters]
 
     public double getSalario() {
         return salario;
@@ -21,4 +21,8 @@ public class Professor extends Pessoa {
     public void setNomeCurso(String nomeCurso) {
         this.nomeCurso = nomeCurso;
     }
+    // #endregion
+
+    // #region regras de negocios
+
 }
