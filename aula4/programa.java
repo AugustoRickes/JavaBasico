@@ -37,5 +37,20 @@ public class programa {
         } else {
             System.out.println("nao e eco eficiente");
         }
+        System.out.println("-------- exercicio da aeronave-----------");
+
+        Aeronave boeing737 = new Aeronave();
+        boeing737.tripulacao = 4;
+        boeing737.combustivel = " QAV-1";
+        boeing737.consumo = 113;
+        boeing737.passageiros = 132;
+        boeing737.passagem = 980;
+        boeing737.tanque = 26000;
+
+        System.out.println(boeing737);
+
+        System.out.println(" Autonomia: " + boeing737.calcAutonomia() + " Media autonomia: "
+                + boeing737.mediaAutonomia() + " Indice Passageiro: " + boeing737.indicePassageiros());
     }
+
 }

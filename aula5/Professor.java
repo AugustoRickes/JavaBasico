@@ -31,8 +31,20 @@ public class Professor extends Pessoa {
         return Math.round((this.salario * 44)) * 4.5;
     }
 
-    private double calculaIrpf(){
-        if()
+    public double calculaIRPF() {
+        double aliquotaIrpf = 0;
+        if (calculaSalario() <= 1903.98) {
+            aliquotaIrpf = 0;
+        } else if (calculaSalario() > 1903.99 && calculaSalario() <= 2826.65) {
+            aliquotaIrpf = 0.075;
+        } else if (calculaSalario() >= 2826.66 && calculaSalario() <= 3751.05) {
+            aliquotaIrpf = 0.15;
+        } else if (calculaSalario() > 3751.06 && calculaSalario() <= 4664.68) {
+            aliquotaIrpf = 0.225;
+        } else if (calculaSalario() > 4664.68) {
+            aliquotaIrpf = 0.275;
+        }
+        return aliquotaIrpf * calculaSalario();
     }
 
     public String montaHolerite() {
@@ -42,6 +54,7 @@ public class Professor extends Pessoa {
         holerite += (" | valor salario: " + this.calculaSalario() + System.lineSeparator());
         holerite += (" | valor hora: " + this.getSalario() + System.lineSeparator());
         holerite += (" | valor referente: " + this.getNomeCurso() + System.lineSeparator());
+        holerite += (" | Valor IRPF: R$ " + this.calculaIRPF() + System.lineSeparator());
         return holerite;
     }
 }
@@ -51,7 +64,7 @@ public class Professor extends Pessoa {
  * https://www.jornalcontabil.com.br/como-calcular-o-desconto-do-inss-nos-
  * salarios-em-2022/#:~:text=At%C3%A9%20R%24%201.100%2C00%20(,e%206.433%2C57%20%
  * E2%80%93%2014%25
- * Montar o método que calcula o IRPF com aliquotas a seguir:
+ * Montar o método que calcula o IRPF com aliquotas a seguir:[ok]
  * https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/
  * tributos/irpf-imposto-de-renda-pessoa-fisica
  * Montar o método de adição de planejamento de aula: 0,3 e DSR 0,2.
