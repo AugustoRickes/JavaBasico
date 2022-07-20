@@ -17,11 +17,12 @@ public class executor extends Equacao {
         dt.setC(entrada.nextDouble());
         dt.calculaDelta();
         System.out.println("resultado de delta: " + dt.getDelta());
+        System.out.println("---------- x| e x|| sao: -----------------");
         if (dt.getDelta() < 0) {
             System.out.println("a equacao nao possui raizes reais.");
         } else {
-            System.out.println("xn :" + xnXp.calculaXn(dt));
-            System.out.println("xp :" + xnXp.calculaXP(dt));
+            System.out.println("X| :" + xnXp.calculaXn(dt));
+            System.out.println("X|| :" + xnXp.calculaXP(dt));
         }
 
     }
