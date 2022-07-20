@@ -6,13 +6,13 @@ public class EqXn extends Equacao {
     private double xn;
     private double xp;
 
-    public double calculaXn(double delta) {
-        xn = -getB() - Math.sqrt(delta) / 2 * getA();
+    public double calculaXn(Delta dt) {
+        xn = (-dt.getB() - Math.sqrt(dt.getDelta())) / 2 * dt.getA();
         return xn;
     }
 
-    public double calculaXP(double delta) {
-        xp = -getB() + Math.sqrt(delta) / 2 * getA();
+    public double calculaXP(Delta dt) {
+        xp = (-dt.getB() + Math.sqrt(dt.getDelta())) / 2 * dt.getA();
         return xp;
     }
 

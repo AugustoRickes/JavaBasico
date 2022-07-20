@@ -20,8 +20,8 @@ public class executor extends Equacao {
         if (dt.getDelta() < 0) {
             System.out.println("a equacao nao possui raizes reais.");
         } else {
-            System.out.println("xn :" + xnXp.calculaXn(dt.getDelta()));
-            System.out.println("xp :" + xnXp.calculaXP(dt.getDelta()));
+            System.out.println("xn :" + xnXp.calculaXn(dt));
+            System.out.println("xp :" + xnXp.calculaXP(dt));
         }
 
     }
