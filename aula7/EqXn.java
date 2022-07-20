@@ -6,16 +6,6 @@ public class EqXn extends Equacao {
     private double xn;
     private double xp;
 
-    public double calculaXn(Delta dt) {
-        xn = (-dt.getB() - Math.sqrt(dt.getDelta())) / 2 * dt.getA();
-        return xn;
-    }
-
-    public double calculaXP(Delta dt) {
-        xp = (-dt.getB() + Math.sqrt(dt.getDelta())) / 2 * dt.getA();
-        return xp;
-    }
-
     // #region encapsulamento
 
     public double getXn() {
@@ -35,4 +25,15 @@ public class EqXn extends Equacao {
     }
     // #endregion
 
+    // #region regra de negocio
+    public double calculaXn(Delta dt) {
+        xn = (-dt.getB() - Math.sqrt(dt.getDelta())) / 2 * dt.getA();
+        return xn;
+    }
+
+    public double calculaXP(Delta dt) {
+        xp = (-dt.getB() + Math.sqrt(dt.getDelta())) / 2 * dt.getA();
+        return xp;
+    }
+    // #endregion
 }
